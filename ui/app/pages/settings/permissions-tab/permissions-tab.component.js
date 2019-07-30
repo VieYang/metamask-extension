@@ -11,7 +11,7 @@ export default class PermissionsTab extends Component {
 
   static propTypes = {
     warning: PropTypes.string,
-    permissions: PropTypes.object.isRequired, 
+    permissions: PropTypes.object.isRequired,
     permissionsDescriptions: PropTypes.object.isRequired,
     removePermissionsFor: PropTypes.func.isRequired,
     showClearPermissionsModal: PropTypes.func.isRequired,
@@ -100,7 +100,7 @@ export default class PermissionsTab extends Component {
        permissions: {
           ...this.state.permissions,
           [id]: perm,
-       }
+       },
     }
     if (perm.selected && !this.state.domains[perm.domain].selected) {
       const domains = { ...this.state.domains }
@@ -223,7 +223,7 @@ export default class PermissionsTab extends Component {
         {
           permission.caveats.map((caveat, i) => (
             <li key={i} className="settings-page__content-list-item__caveat">
-              {t('caveat:' + caveat.type)}
+              {t('caveat_' + caveat.type)}
               {this.renderCaveatValue(caveat.value)}
             </li>
           ))
