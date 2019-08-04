@@ -1,4 +1,4 @@
-const Web3 = require('web3')
+const Web3 = require('newchain-web3')
 const contracts = require('eth-contract-metadata')
 const { warn } = require('loglevel')
 const { MAINNET } = require('./network/enums')
